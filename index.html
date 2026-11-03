@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102f69"><meta name="description" content="Ahmed Abd Alazim — Superior Accountant, Company Representative, National Navigation Co.">
+<title>Ahmed Abd Alazim | NNC</title><link rel="icon" href="assets/nnc-logo.png"><link rel="stylesheet" href="styles.css"></head>
+<body><main class="card"><header class="brand"><img src="assets/nnc-logo.png" class="logo" alt="National Navigation Co. logo">
+<h2>NATIONAL NAVIGATION CO.</h2><p lang="ar" dir="rtl">شركة الملاحة الوطنية</p><div class="rule"></div></header>
+<div class="language-switch"><button id="enBtn" class="lang active">English</button><button id="arBtn" class="lang">العربية</button></div>
+<section id="identity" lang="en" dir="ltr"><p class="eyebrow" data-en="PROFESSIONAL CONTACT CARD" data-ar="بطاقة اتصال مهنية">PROFESSIONAL CONTACT CARD</p>
+<h1 data-en="Ahmed Abd Alazim" data-ar="أحمد عبد العظيم">Ahmed Abd Alazim</h1>
+<p class="job" data-en="Superior Accountant" data-ar="محاسب أول">Superior Accountant</p>
+<p class="rep" data-en="Company Representative" data-ar="ممثل الشركة">Company Representative</p></section>
+<nav class="actions">
+<a class="action primary" href="tel:+20224560541">☎ <span data-en="Call Office" data-ar="اتصال بالمكتب">Call Office</span></a>
+<a class="action" href="tel:+201223123616">☎ <span data-en="Call Mobile" data-ar="اتصال بالموبايل">Call Mobile</span></a>
+<a class="action" href="mailto:aawad@nnc.com.eg">✉ <span data-en="Email" data-ar="البريد الإلكتروني">Email</span></a>
+<a class="action" href="https://www.nnc.com.eg" target="_blank" rel="noopener">↗ <span data-en="Company Website" data-ar="موقع الشركة">Company Website</span></a>
+<a class="action full" href="https://www.google.com/maps/search/?api=1&query=4+El+Hegaz+St+Heliopolis+Cairo" target="_blank" rel="noopener">⌖ <span data-en="View Address" data-ar="عرض العنوان على الخريطة">View Address</span></a></nav>
+<section class="details">
+<div class="detail"><span class="label" data-en="TELEPHONE" data-ar="تليفون">TELEPHONE</span><a href="tel:+20224560541">+20224560541</a></div>
+<div class="detail"><span class="label" data-en="MOBILE" data-ar="موبايل">MOBILE</span><a href="tel:+201223123616">+201223123616</a></div>
+<div class="detail"><span class="label" data-en="EMAIL" data-ar="البريد الإلكتروني">EMAIL</span><a href="mailto:aawad@nnc.com.eg">aawad@nnc.com.eg</a></div>
+<div class="detail"><span class="label" data-en="WEBSITE" data-ar="الموقع الإلكتروني">WEBSITE</span><a href="https://www.nnc.com.eg" target="_blank" rel="noopener">www.nnc.com.eg</a></div>
+<div class="address"><b class="label" data-en="ADDRESS" data-ar="العنوان">ADDRESS</b><p data-en="4 El Hegaz St., Heliopolis, Cairo. P.O.B. 216 HEL." data-ar="٤ شارع الحجاز، مصر الجديدة، القاهرة. ص.ب ٢١٦ هليوبوليس.">4 El Hegaz St., Heliopolis, Cairo. P.O.B. 216 HEL.</p></div></section>
+<footer><button id="saveContact" class="save">＋ <span data-en="Save Contact" data-ar="حفظ جهة الاتصال">Save Contact</span></button><p data-en="National Navigation Co. — Connecting with confidence." data-ar="شركة الملاحة الوطنية — تواصل بثقة.">National Navigation Co. — Connecting with confidence.</p></footer></main>
+<script>
+const en=document.getElementById('enBtn'), ar=document.getElementById('arBtn'), identity=document.getElementById('identity');
+function setLang(lang){document.documentElement.lang=lang;identity.lang=lang;identity.dir=lang==='ar'?'rtl':'ltr';document.querySelectorAll('[data-en]').forEach(e=>e.textContent=e.dataset[lang]);en.classList.toggle('active',lang==='en');ar.classList.toggle('active',lang==='ar')}
+en.onclick=()=>setLang('en');ar.onclick=()=>setLang('ar');
+document.getElementById('saveContact').onclick=()=>{const v=['BEGIN:VCARD','VERSION:3.0','N:Abd Alazim;Ahmed;;;','FN:Ahmed Abd Alazim','ORG:National Navigation Co.','TITLE:Superior Accountant - Company Representative','TEL;TYPE=WORK,VOICE:+20224560541','TEL;TYPE=CELL,VOICE:+201223123616','EMAIL:aawad@nnc.com.eg','URL:https://www.nnc.com.eg','ADR;TYPE=WORK:;;4 El Hegaz St.;Heliopolis;Cairo;;Egypt','END:VCARD'].join('\r\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([v],{type:'text/vcard'}));a.download='Ahmed_Abd_Alazim_NNC.vcf';a.click();URL.revokeObjectURL(a.href)}
+</script></body></html>
